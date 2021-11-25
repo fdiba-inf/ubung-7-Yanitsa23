@@ -12,12 +12,20 @@ public class RecursivePrimePrinter {
         printPrimes(n);
     }
 
-    public static void printPrimes(int n) {
-        // Implement recursive method
+    public static void printPrimes(int n) { //recursive method
+       for(int i = n; i > 0; i--) {
+         if(isPrime(i)) {
+           System.out.println(i);
+         }
+       }
     }
 
-    public static boolean isPrime(int n) {
-        // Implement method
-        return false;
+    public static boolean isPrime(int n) { //method
+        for(int i = 2; i < n; i++) {
+          if(n % i == 0) {
+           return false;
+          }
+        }
+        return true;
     }
 }
